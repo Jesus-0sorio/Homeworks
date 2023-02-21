@@ -23,10 +23,13 @@ export function App() {
 
   return (
     <>
+      <h1>Challenge {component + 1}</h1>
       {arrayComponent[component]}
       <div>
         <button onClick={changeComponent}>{"<"}</button>
-        <button onClick={changeComponent} id="plus">{">"}</button>
+        <button onClick={changeComponent} id="plus">
+          {">"}
+        </button>
       </div>
     </>
   );

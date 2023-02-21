@@ -5,7 +5,7 @@ export const mainFetch = () => {
   return (
     <>
     <input type="text" name="" id="" onChange={() => setText(e.target.value)}/>
-    <button onClick={}>enviar</button>
+    <button >enviar</button>
     </>
   )
 }
