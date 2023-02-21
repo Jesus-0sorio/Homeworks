@@ -10,7 +10,7 @@ const arrayComponent = [
 ];
 
 export function App() {
-  const [component, setComponent] = useState(4);
+  const [component, setComponent] = useState(0);
 
   const changeComponent = (e) => {
     const result = e.target.id === "plus" ? component + 1 : component - 1;
