@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { FirstApp, Counter, ComponentApp, GifExpertApp } from "./components";
+import { FirstApp, Counter, ComponentApp, GifExpertApp, Gifs } from "./components";
 
 const arrayComponent = [
   <FirstApp />,
   <Counter value={0} />,
   <ComponentApp />,
   <GifExpertApp />,
+  <Gifs />
 ];
 
 export function App() {
-  const [component, setComponent] = useState(0);
+  const [component, setComponent] = useState(4);
 
   const changeComponent = (e) => {
     const result = e.target.id === "plus" ? component + 1 : component - 1;
