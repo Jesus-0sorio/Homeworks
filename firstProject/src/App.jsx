@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { FirstApp, Counter, ComponentApp, GifExpertApp, Gifs } from "./components";
+import { FirstApp, Counter, ComponentApp, GifExpertApp, Gifs, CounterHook } from "./components";
 
 const arrayComponent = [
   <FirstApp />,
   <Counter value={0} />,
   <ComponentApp />,
   <GifExpertApp />,
-  <Gifs />
+  <Gifs />,
+  <CounterHook value={0}/>
 ];
 
 export function App() {
