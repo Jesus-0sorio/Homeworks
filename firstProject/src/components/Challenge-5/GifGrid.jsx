@@ -1,6 +1,6 @@
 import React from "react";
 import { GifFetchApi } from "./GifFetchApi";
-import { GifItem } from "../GifItem";
+import { GifItem } from "./GifItem";
 import "./grid.css";
 
 export const GifGrid = ({ category }) => {
