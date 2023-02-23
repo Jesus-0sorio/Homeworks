@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FirstApp, Counter, ComponentApp, GifExpertApp, Gifs, CounterHook } from "./components";
+import { FirstApp, Counter, ComponentApp, GifExpertApp, Gifs, CounterHook, BreakingBad } from "./components";
 
 const arrayComponent = [
   <FirstApp />,
@@ -7,7 +7,8 @@ const arrayComponent = [
   <ComponentApp />,
   <GifExpertApp />,
   <Gifs />,
-  <CounterHook value={0}/>
+  <CounterHook value={0}/>,
+  <BreakingBad />
 ];
 
 export function App() {
