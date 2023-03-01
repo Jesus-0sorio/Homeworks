@@ -1,6 +1,6 @@
 import React from 'react'
-import {useFetch} from '../hooks/useFetch'  
-import {useCounter} from '../hooks/useCounter'
+import {useFetch} from './hooks/useFetch'  
+import {useCounter} from './hooks/useCounter'
 
 export const BreakingBad = () => {
   const {counter, increment, decrement} = useCounter(1)
