@@ -1,19 +1,17 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Productos } from "./Productos";
-import { Navbar } from "./components/Navbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";;
+import { Home, Exercise } from "./pages";
+import { Navbar } from "./components";
 
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <Routes>
-        <Route exact path="/" element={<Hello />} />
-        <Route path="/productos" element={<Productos />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/exercise/:id" element={<Exercise />} />
       </Routes>
     </Router>
   );
 }
-
-const Hello = () => <h1>Hello Word</h1>;
 
 export default App;
