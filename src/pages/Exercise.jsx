@@ -1,8 +1,28 @@
 import React from "react";
-import { ConvertTime, CostCall, Greet } from "../components";
+import {
+  ConvertTime,
+  CostCall,
+  Greet,
+  EqualsNumbers,
+  SortList,
+  ImpartsNumebers,
+  Salary,
+  DivideNumber,
+  CreateTable,
+} from "../components";
 import { useParams } from "react-router-dom";
 
-const exercise = [<ConvertTime />, <CostCall />, <Greet />];
+const exercise = [
+  <ConvertTime />,
+  <CostCall />,
+  <Greet />,
+  <EqualsNumbers />,
+  <SortList />,
+  <ImpartsNumebers />,
+  <Salary />,
+  <DivideNumber />,
+  <CreateTable />,
+];
 
 export const Exercise = () => {
   const { id } = useParams();
