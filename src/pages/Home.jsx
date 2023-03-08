@@ -1,17 +1,17 @@
-import React from 'react'
+import { CardExercise } from "../components";
 
 export const Home = () => {
   return (
-    <div className='grid grid-cols-3 grid-flow-row gap-3 container mx-auto'>
-      <div className='border'>1</div>
-      <div className='border'>2</div>
-      <div className='border'>3</div>
-      <div className='border'>4</div>
-      <div className='border'>5</div>
-      <div className='border'>6</div>
-      <div className='border'>7</div>
-      <div className='border'>8</div>
-      <div className='border'>9</div>
+    <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-4 container mx-auto">
+      <CardExercise number={1} text="Convertidor de segundos a hora" />
+      <CardExercise number={2} text="Total a pagar por llamada" />
+      <CardExercise number={3} text="Mensaje de saludo" />
+      <CardExercise number={4} text="¿Los números son iguales?" />
+      <CardExercise number={5} text="Lista de numeros ordenados" />
+      <CardExercise number={6} text="Numeros impares" />
+      <CardExercise number={7} text="Aumento de salario" />
+      <CardExercise number={8} text="Divide por el numero" />
+      <CardExercise number={9} text="Muestra la matriz" />
     </div>
-  )
-}
+  );
+};

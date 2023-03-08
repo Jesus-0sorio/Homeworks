@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { Exercise } from "../pages";
 
 export const Navbar = () => {
   return (
