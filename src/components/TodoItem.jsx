@@ -2,17 +2,17 @@ import React from 'react';
 
 export const TodoItem = ({ index, todo, dispatchTodo }) => {
 	const handleComplete = () => {
-		dispatchTodo({
-			type: 'complete',
-			payload: todo.id,
-		});
+		// dispatchTodo({
+		// 	type: 'complete',
+		// 	payload: todo.id,
+		// });
 	};
 
 	const handleDelete = () => {
-		dispatchTodo({
-			type: 'delete',
-			payload: todo.id,
-		});
+		// dispatchTodo({
+		// 	type: 'delete',
+		// 	payload: todo.id,
+		// });
 	};
 
 	return (

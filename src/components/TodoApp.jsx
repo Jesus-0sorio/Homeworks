@@ -12,11 +12,11 @@ const initialState = [
 ];
 
 const initTodo = (initialState) => {
-  return JSON.parse(localStorage.getItem('todos')) || initialState;
+  // return JSON.parse(localStorage.getItem('todos')) || initialState;
 };
 
 const TodoApp = () => {
-	const [todos, dispatchTodo] = useReducer(TodoReducer, initialState, initTodo);
+	const [todos, dispatchTodo] = useReducer(TodoReducer, initialState);
 
 	const handleAddTodo = (newTodo) => {
 		dispatchTodo({
@@ -25,9 +25,9 @@ const TodoApp = () => {
 		});
   };
   
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos])
+  // useEffect(() => {
+  //   localStorage.setItem('todos', JSON.stringify(todos));
+  // }, [todos])
   
 
 	return (
