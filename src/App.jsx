@@ -1,7 +1,7 @@
-import { Father } from './components/Father';
+import TodoApp from './components/TodoApp';
 
 function App() {
-	return <Father />;
+	return <TodoApp />;
 }
 
 export default App;
