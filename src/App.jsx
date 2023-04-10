@@ -1,17 +1,7 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";;
-import { Home, Exercise } from "./pages";
-import { Navbar } from "./components";
+import { Father } from './components/Father';
 
 function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/exercise/:id" element={<Exercise />} />
-      </Routes>
-    </Router>
-  );
+	return <Father />;
 }
 
 export default App;
