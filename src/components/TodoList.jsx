@@ -1,6 +1,6 @@
 import { TodoItem } from './TodoItem';
 
-export const TodoList = ({ todos = [], dispatchTodo }) => {
+export const TodoList = ({ todos = [], handleComplete, handleDelete}) => {
 	return (
 		<ul className='list-group'>
 			{todos.map((todo, i) => (
@@ -8,7 +8,8 @@ export const TodoList = ({ todos = [], dispatchTodo }) => {
 					key={todo.id}
 					index={i}
 					todo={todo}
-					dispatchTodo={dispatchTodo}
+					handleComplete={handleComplete}
+					handleDelete={handleDelete}
 				/>
 			))}
 		</ul>

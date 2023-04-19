@@ -10,7 +10,7 @@ export const TodoAdd = ({ handleAddTodo }) => {
 			id: new Date().getTime(),
 			desc: inputRef.current.value,
 			done: false,
-    };
+		};
 		handleAddTodo(newTodo);
 		inputRef.current.value = '';
 	};

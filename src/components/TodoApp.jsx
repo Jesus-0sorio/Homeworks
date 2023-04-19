@@ -1,7 +1,7 @@
-import { useReducer, useEffect } from 'react';
+import { useTODO } from '../hooks/useTODO';
+import { TodoReducer } from './TodoReducer';
 import { TodoAdd } from './TodoAdd';
 import { TodoList } from './TodoList';
-import { TodoReducer } from './TodoReducer';
 
 const initialState = [
 	{
@@ -11,32 +11,24 @@ const initialState = [
 	},
 ];
 
-const initTodo = (initialState) => {
-  // return JSON.parse(localStorage.getItem('todos')) || initialState;
+const initTodo = () => {
+	return JSON.parse(localStorage.getItem('todos')) || initialState;
 };
 
 const TodoApp = () => {
-	const [todos, dispatchTodo] = useReducer(TodoReducer, initialState);
-
-	const handleAddTodo = (newTodo) => {
-		dispatchTodo({
-			type: 'add',
-			payload: newTodo,
-		});
-  };
-  
-  // useEffect(() => {
-  //   localStorage.setItem('todos', JSON.stringify(todos));
-  // }, [todos])
-  
+	const { handleAddTodo, todos, handleComplete, handleDelete } = useTODO(
+		TodoReducer,
+		initialState,
+		initTodo
+	);
 
 	return (
 		<>
 			<h1>
-				TodoApp: {todos.length},{' '}
+				TodoApp: {todos?.length},{' '}
 				<small>
 					{' '}
-					Pendientes: {todos.filter((todo) => todo.done == false).length}
+					Pendientes: {todos?.filter((todo) => todo.done == false).length}
 				</small>
 			</h1>
 			<hr />
@@ -44,7 +36,8 @@ const TodoApp = () => {
 				<div className='col-7'>
 					<TodoList
 						todos={todos}
-						dispatchTodo={dispatchTodo}
+						handleComplete={handleComplete}
+						handleDelete={handleDelete}
 					/>
 				</div>
 				<TodoAdd handleAddTodo={handleAddTodo} />
