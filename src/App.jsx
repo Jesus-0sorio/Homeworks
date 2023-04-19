@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { NavComponent } from './components/NavComponent';
 import About from './pages/About';
 import Home from './pages/Home';
@@ -18,7 +18,7 @@ function App() {
 				/>
 				<Route
 					path='/*'
-					element={<About />}
+					element={<Navigate to='/about' />}
 				/>
 				<Route
 					path='login'
