@@ -19,16 +19,16 @@ export const Counter = () => {
 		<>
 			<h1 className='text-center'>App</h1>
 			<hr />
-			<div className='p-3'>
+			<div className='p-3 d-flex flex-column align-items-center w-25 mx-auto'>
 				<p>Counter is: {counter}</p>
-				<div className='d-flex gap-1'>
+				<div className='d-flex gap-1 w-100'>
 					<button
-						className='btn btn-primary'
+						className='btn btn-primary w-100'
 						onClick={() => dispatch(increment())}>
 						Increment
 					</button>
 					<button
-						className='btn btn-danger'
+						className='btn btn-danger w-100'
 						onClick={() => dispatch(decrement())}>
 						Decrement
 					</button>
@@ -36,11 +36,11 @@ export const Counter = () => {
 				<input
 					ref={number}
 					type='number'
-					className='mt-2 me-2'
+					className='mt-2 me-2 w-100'
 				/>
 				<button
 					onClick={handleIncrementBy}
-					className='btn btn-primary'>
+					className='btn btn-primary mt-2 w-100'>
 					Sumar
 				</button>
 			</div>
