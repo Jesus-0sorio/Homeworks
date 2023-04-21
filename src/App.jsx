@@ -1,35 +1,30 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { NavComponent } from './components/NavComponent';
+import UserProvider from './context/UserProvider';
 import About from './pages/About';
 import Home from './pages/Home';
-import Login from './pages/Login'
+import Login from './pages/Login';
+import { ProductsPage } from './components/ProductsPage';
+import {AppRoutes} from './components/AppRoutes'
 
 function App() {
 	return (
-		<>
-			<NavComponent />
-			<h1>Main app</h1>
-			<hr />
-
-			<Routes>
-				<Route
-					path='/'
-					element={<Home />}
-				/>
-				<Route
-					path='/*'
-					element={<About />}
-				/>
+		<UserProvider>
+			
+			<AppRoutes />
+			{/* <Routes>
+				<Route path='products'>
+					<Route
+						path=':id'
+						element={<ProductsPage />}
+					/>
+				</Route>
 				<Route
 					path='login'
 					element={<Login />}
 				/>
-				<Route
-					path='about'
-					element={<About />}
-				/>
-			</Routes>
-		</>
+			</Routes> */}
+		</UserProvider>
 	);
 }
 

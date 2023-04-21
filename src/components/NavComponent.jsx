@@ -1,12 +1,13 @@
-import React from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-
-
+import UserContext from '../context/UserContext';
 
 export const NavComponent = () => {
-  const classActive = ({ isActive }) => {
-    return isActive ? 'nav-link active' : 'nav-link';
-  }
+	const { logged } = useContext(UserContext);
+
+	const classActive = ({ isActive }) => {
+		return isActive ? 'nav-link active' : 'nav-link';
+	};
 	return (
 		<>
 			<nav className='navbar navbar-expand-lg bg-light'>
@@ -34,17 +35,43 @@ export const NavComponent = () => {
 								<NavLink
 									className={classActive}
 									aria-current='page'
-									to='login'>
-									Login
+									to='/'>
+									Inicio
 								</NavLink>
 							</li>
 							<li className='nav-item'>
 								<NavLink
 									className={classActive}
 									to='about'>
-									About
+									Nosotros
 								</NavLink>
 							</li>
+							<li className='nav-item'>
+								<NavLink
+									className={classActive}
+									to='products'>
+									Productos
+								</NavLink>
+							</li>
+							{logged ? (
+								<li className='nav-item'>
+									<NavLink
+										className={classActive}
+										aria-current='page'
+										to='profile'>
+										Perfil
+									</NavLink>
+								</li>
+							) : (
+								<li className='nav-item'>
+									<NavLink
+										className={classActive}
+										aria-current='page'
+										to='login'>
+										Iniciar sesion
+									</NavLink>
+								</li>
+							)}
 						</ul>
 					</div>
 				</div>
